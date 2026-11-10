@@ -372,13 +372,13 @@ Dengan sistem tersebut, pengelola dapat mengetahui kondisi air tanpa harus selal
 
 ```mermaid
 flowchart TD
-    A[Persiapan Tangki dan Pipa] --> B[Pemasangan Sensor]
-    B --> C[Hubungkan Sensor ke ESP32]
-    C --> D[Hubungkan ESP32 ke Wi-Fi]
-    D --> E[Pengiriman Data]
-    E --> F[Database]
-    F --> G[Dashboard Monitoring]
-    G --> H[Pengelola Memeriksa Kondisi Air]
+    A[Persiapan Tangki dan Pipa] --> B[Pemasangan Sensor ]
+    B --> C[Hubungkan Sensor ke ESP32 ]
+    C --> D[Hubungkan ESP32 ke Wi-Fi ]
+    D --> E[Pengiriman Data ]
+    E --> F[Database ]
+    F --> G[Dashboard Monitoring ]
+    G --> H[Pengelola Memeriksa Kondisi Air ]
 ```
 
 ## 10.5 Catatan Instalasi
