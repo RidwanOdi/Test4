@@ -1,1 +1,693 @@
-# Test4
+# LAPORAN TUGAS KEWIRAUSAHAAN - KELOMPOK 06
+
+Dokumen ini disusun untuk memenuhi **Laporan Tugas Mata Kuliah Kewirausahaan (B)**.
+
+# KUESIONER PEMILIK USAHA KANTIN FEB
+
+## Analisis Permasalahan Operasional Kantin sebagai Dasar Perancangan Solusi Teknologi Informasi
+
+## Informasi Akademik
+
+- **Dosen Pengampu**: Adi Wahyu Pribadi, S.Si., M.Kom
+- **Instansi**: Universitas Pancasila, Fakultas Teknik, S1 Teknik Informatika
+- **Tahun**: 2026
+
+---
+
+## Anggota Kelompok 06
+
+| Nama | NPM | Peran |
+|---|---|---|
+| Anggun Setiawati Dewi | 4523210019 | Membuat presentasi PowerPoint dan membantu memberikan semangat kepada anggota kelompok. |
+| Ridwan Odi Nugroho | 4524210089 | Melakukan wawancara tatap muka dengan pemilik usaha menggunakan kuesioner yang telah disiapkan, menyusun pertanyaan kuesioner, mengatur kebutuhan dan struktur repository GitHub, serta menginisiasi dan mengarahkan proses awal kegiatan. |
+| Zaidan Dziaulfawwaz | 4524210105 | Membuat presentasi PowerPoint dan membantu memberikan semangat kepada anggota kelompok. |
+| Adystya Anandita | 4525210003 | Membuat presentasi PowerPoint untuk tugas presentasi pertama. [Lihat Presentasi](https://docs.google.com/presentation/d/1VXO7XrQDsNq_OlvRNojLwIm9PXsBsyjqqiIOMSqK-w0/edit?usp=sharing) |
+| Alwan Fawwaz Ibrahim | 4525210010 | Membuat Google Form kuesioner dan memilih pertanyaan yang akan dimasukkan ke dalam Google Form. |
+
+---
+
+## Pemetaan Sub-CPMK
+
+| Sub-CPMK | Cakupan dalam Laporan |
+|---|---|
+| **Sub-CPMK 1** | Identifikasi kondisi dan karakteristik usaha kantin berdasarkan hasil kuesioner. |
+| **Sub-CPMK 2** | Pengumpulan informasi mengenai produk, pelanggan, proses penjualan, dan kegiatan operasional kantin. |
+| **Sub-CPMK 3** | Identifikasi permasalahan yang dihadapi pemilik usaha, khususnya ketersediaan dan distribusi air. |
+| **Sub-CPMK 4** | Analisis kebutuhan berdasarkan permasalahan yang ditemukan. |
+| **Sub-CPMK 5** | Perumusan kemungkinan solusi berbasis Teknologi Informasi. |
+| **Sub-CPMK 6** | Rancangan awal sistem monitoring ketersediaan dan distribusi air menggunakan sensor, mikrokontroler, dan sistem monitoring. |
+| **Sub-CPMK 7** | Hubungan permasalahan usaha dengan penerapan Teknologi Informasi dalam bidang Teknik Informatika. |
+| **Sub-CPMK 8** | Dokumentasi dan penyajian hasil kuesioner melalui laporan dan GitHub. |
+| **Sub-CPMK 9** | Refleksi peran mahasiswa Teknik Informatika dalam mengidentifikasi masalah nyata dan merancang solusi teknologi. |
+
+---
+
+# 1. PENDAHULUAN
+
+Kuesioner ini dilakukan untuk mengetahui kondisi usaha dan permasalahan yang dihadapi oleh pemilik usaha kantin dan usaha pendukung di lingkungan Fakultas Ekonomi dan Bisnis Universitas Pancasila.
+
+Kegiatan ini dilakukan oleh mahasiswa Program Studi Teknik Informatika, Fakultas Teknik, Universitas Pancasila. Pengumpulan informasi dilakukan melalui wawancara tatap muka dengan pemilik usaha menggunakan pertanyaan yang telah disiapkan oleh kelompok.
+
+Hasil wawancara digunakan untuk mengetahui kondisi usaha, kegiatan operasional, serta kendala yang dihadapi oleh masing-masing pemilik usaha. Selain itu, informasi yang diperoleh juga digunakan untuk mengidentifikasi permasalahan yang dapat dikembangkan menjadi solusi berbasis Teknologi Informasi.
+
+Berdasarkan hasil wawancara dari beberapa pemilik usaha, sebagian besar kegiatan operasional seperti penjualan, pengelolaan stok, dan penggunaan kemasan dapat berjalan dengan baik.
+
+Namun, ditemukan beberapa permasalahan pada beberapa usaha, seperti ketersediaan air keran yang tidak mencukupi, debit air yang kecil, air keran yang terkadang habis, kenaikan harga bahan baku, kenaikan harga plastik, serta gangguan listrik pada usaha fotocopy.
+
+Dari berbagai permasalahan tersebut, ketersediaan dan distribusi air menjadi salah satu permasalahan yang ditemukan pada beberapa kantin dan dapat dianalisis lebih lanjut dari sudut pandang Teknik Informatika.
+
+---
+
+# 2. TUJUAN
+
+Kegiatan wawancara dan penyusunan laporan ini memiliki beberapa tujuan, yaitu:
+
+1. Mengetahui jenis usaha dan produk yang dijual oleh pemilik usaha.
+2. Mengetahui pelanggan utama dari masing-masing usaha.
+3. Mengetahui proses penjualan dan pelayanan kepada pelanggan.
+4. Mengetahui cara pemilik usaha mengelola stok barang dan bahan baku.
+5. Mengidentifikasi kendala yang terjadi dalam kegiatan operasional.
+6. Mengidentifikasi permasalahan fasilitas yang digunakan oleh usaha.
+7. Menganalisis permasalahan yang dapat dikembangkan menjadi kebutuhan sistem berbasis Teknologi Informasi.
+8. Memberikan rekomendasi awal berupa kemungkinan solusi teknologi terhadap permasalahan yang ditemukan.
+
+---
+
+# 3. PEMETAAN PEMANGKU KEPENTINGAN
+
+Berdasarkan hasil wawancara, terdapat lima usaha yang menjadi sumber informasi dalam kegiatan ini.
+
+| No. | Usaha | Lama Usaha | Pelanggan Utama | Permasalahan yang Ditemukan |
+|---|---|---|---|---|
+| 1 | Kantin Risol Sovina | ± 2 tahun | Mahasiswa | Kekurangan air keran untuk mencuci piring dan keperluan lainnya. |
+| 2 | Warung Makan Berkah | ± 5 tahun | Mahasiswa, dosen, dan karyawan | Air keran kurang atau debit air kecil. |
+| 3 | Fotocopy Mitra Buana | ± 17 tahun (sejak 2009) | Mahasiswa dan dosen | Listrik dapat mati hingga beberapa jam. |
+| 4 | Mie RR | ± 2 tahun | Mahasiswa | Air keran sering habis dan distribusi air tidak merata. |
+| 5 | Dapur Selera Mamah Ria | ± 6 bulan | Mahasiswa, dosen, dan karyawan | Air keran kecil dan kenaikan harga bahan baku. |
+
+Secara umum, proses penjualan pada usaha-usaha tersebut dapat berjalan dengan baik. Permasalahan yang paling sering muncul berkaitan dengan fasilitas pendukung, terutama ketersediaan air keran.
+
+---
+
+# 4. ANALISIS PERMASALAHAN AIR
+
+Berdasarkan jawaban pemilik usaha, permasalahan air yang ditemukan meliputi:
+
+- Air keran terkadang habis.
+- Debit air yang keluar kecil.
+- Air kurang mencukupi untuk mencuci piring dan peralatan.
+- Beberapa kantin menggunakan sumber air yang sama.
+- Ketika beberapa kantin menggunakan air secara bersamaan, debit air dapat menjadi lebih kecil.
+- Terdapat kemungkinan bahwa kapasitas pompa dan sistem distribusi belum mampu memenuhi kebutuhan seluruh kantin secara bersamaan.
+
+Permasalahan tersebut penting karena air digunakan untuk kegiatan operasional sehari-hari, seperti:
+
+- Mencuci piring.
+- Mencuci peralatan memasak.
+- Membersihkan area kantin.
+- Menjaga kebersihan peralatan makan.
+- Mendukung kegiatan operasional kantin.
+
+Apabila debit air terlalu kecil, kegiatan mencuci dan membersihkan peralatan dapat menjadi lebih lambat dan mengganggu kegiatan operasional.
+
+---
+
+# 5. KEMUNGKINAN PENYEBAB PERMASALAHAN
+
+Berdasarkan hasil wawancara, penyebab sebenarnya masih perlu diperiksa secara langsung. Namun, terdapat beberapa kemungkinan penyebab yang dapat dijadikan dasar untuk analisis lebih lanjut.
+
+## 5.1 Kapasitas Tangki Air Tidak Mencukupi
+
+Salah satu kemungkinan adalah kapasitas penampungan air yang tersedia belum mencukupi kebutuhan seluruh kantin.
+
+Jika banyak kantin menggunakan air secara bersamaan, persediaan air di dalam tangki dapat berkurang lebih cepat.
+
+Salah satu solusi fasilitas yang dapat dipertimbangkan adalah menambahkan satu tangki air sebagai penampungan tambahan atau cadangan.
+
+Dengan adanya tangki tambahan, jumlah air yang dapat disimpan menjadi lebih besar sehingga dapat membantu memenuhi kebutuhan pada saat penggunaan air meningkat.
+
+Namun, penambahan tangki perlu mempertimbangkan kapasitas sumber air, kondisi lokasi, dan kemampuan sistem pompa.
+
+## 5.2 Kapasitas Pompa Air
+
+Kemungkinan kedua adalah kapasitas pompa belum sesuai dengan jumlah kantin yang menggunakan air.
+
+Apabila banyak kantin menggunakan air secara bersamaan, tekanan dan debit air yang diterima oleh setiap kantin dapat mengalami penurunan.
+
+Oleh karena itu, kapasitas pompa dan kemampuannya dalam mendistribusikan air perlu diperiksa.
+
+## 5.3 Distribusi Air Tidak Memadai
+
+Kemungkinan lainnya adalah sistem distribusi air belum dapat memberikan debit yang merata kepada seluruh kantin.
+
+Berdasarkan keterangan pemilik usaha, terdapat kondisi ketika beberapa kantin menggunakan air secara bersamaan dan kantin lain mendapatkan air dengan debit yang lebih kecil atau bahkan tidak mendapatkan air.
+
+Terdapat dugaan bahwa kondisi tersebut dapat terjadi ketika lebih dari sekitar lima kantin menggunakan air secara bersamaan.
+
+Namun, angka tersebut masih merupakan informasi berdasarkan pengalaman pemilik usaha, bukan hasil pengukuran teknis. Oleh karena itu, diperlukan pengukuran langsung untuk memastikan penyebabnya.
+
+---
+
+# 6. POTENSI SOLUSI BERBASIS TEKNOLOGI INFORMASI
+
+Sebagai mahasiswa Teknik Informatika, permasalahan tersebut dapat dikembangkan menjadi sebuah konsep **Sistem Monitoring Ketersediaan dan Distribusi Air Kantin Berbasis Internet of Things (IoT)**.
+
+Sistem ini bertujuan untuk membantu pengelola mengetahui kondisi air secara lebih mudah dan terukur.
+
+Sistem dapat memantau beberapa informasi, seperti:
+
+- Volume atau ketinggian air di dalam tangki.
+- Debit air.
+- Kondisi aliran air.
+- Waktu penggunaan air.
+- Peringatan ketika volume air rendah.
+- Status pompa apabila dilengkapi perangkat pemantauan tambahan.
+
+Dengan adanya sistem monitoring, kondisi air tidak hanya diketahui berdasarkan perkiraan atau pemeriksaan manual, tetapi dapat dipantau berdasarkan data dari sensor.
+
+## 6.1 Rancangan Awal Sistem
+
+Berikut merupakan gambaran konsep awal sistem monitoring:
+
+```mermaid
+flowchart TD
+    A[Tangki Air] --> B[Sensor Ultrasonik]
+    A --> C[Pipa Distribusi]
+    C --> D[Sensor Debit Air]
+    B --> E[ESP32]
+    D --> E
+    E --> F[Wi-Fi / Internet]
+    F --> G[Database]
+    G --> H[Dashboard Monitoring]
+    H --> I[Informasi Volume Air]
+    H --> J[Informasi Debit Air]
+    H --> K[Notifikasi]
+```
+
+### Informasi yang Dapat Dipantau
+
+**Dashboard:**
+
+- Ketinggian atau perkiraan volume air.
+- Debit air.
+- Kondisi aliran air.
+- Riwayat pengukuran.
+
+**Notifikasi:**
+
+- Volume air tangki rendah.
+- Debit air mengalami penurunan.
+- Data sensor tidak diterima oleh sistem.
+
+Apabila pengelola juga ingin mengetahui status pompa secara otomatis, sistem perlu dilengkapi perangkat atau sensor tambahan yang sesuai.
+
+Diagram di atas merupakan **rancangan konsep awal**, bukan sistem yang sudah diimplementasikan.
+
+---
+
+# 7. HUBUNGAN DENGAN TEKNIK INFORMATIKA
+
+Konsep sistem monitoring tersebut dapat dikembangkan menggunakan beberapa teknologi yang berkaitan dengan Teknik Informatika.
+
+## 7.1 Internet of Things (IoT)
+
+Internet of Things merupakan konsep penggunaan perangkat yang dapat mengumpulkan dan mengirimkan data melalui jaringan internet.
+
+Dalam sistem ini, sensor digunakan untuk membaca kondisi air secara langsung, seperti ketinggian air di dalam tangki dan debit air yang mengalir pada pipa.
+
+## 7.2 Mikrokontroler
+
+Mikrokontroler digunakan sebagai penghubung antara sensor dengan sistem monitoring.
+
+Salah satu perangkat yang dapat digunakan adalah ESP32. Perangkat ini menerima data dari sensor, memprosesnya, dan mengirimkan data melalui jaringan Wi-Fi.
+
+## 7.3 Database
+
+Data yang diperoleh dari sensor dapat disimpan ke dalam database.
+
+Contoh data yang dapat disimpan:
+
+- Ketinggian air.
+- Perkiraan volume air.
+- Debit air.
+- Waktu pengukuran.
+- Kondisi aliran air.
+
+Data tersebut kemudian dapat digunakan untuk melihat riwayat penggunaan air.
+
+## 7.4 Dashboard
+
+Data dapat ditampilkan melalui dashboard agar pengelola dapat melihat kondisi air dengan lebih mudah.
+
+Contoh tampilan informasi:
+
+```text
+MONITORING AIR KANTIN
+
+Volume Air       : 65%
+Debit Air        : Normal
+Kondisi Aliran   : Normal
+Koneksi Sistem   : Terhubung
+```
+
+Angka di atas merupakan contoh tampilan, bukan hasil pengukuran sebenarnya.
+
+## 7.5 Sistem Notifikasi
+
+Sistem juga dapat memberikan peringatan ketika kondisi tertentu terjadi.
+
+Contohnya:
+
+```text
+PERINGATAN:
+Volume air tangki rendah.
+Segera lakukan pemeriksaan.
+```
+
+Contoh lainnya:
+
+```text
+PERINGATAN:
+Debit air mengalami penurunan.
+Periksa kondisi pompa dan jalur perpipaan.
+```
+
+---
+
+# 8. REKOMENDASI AWAL
+
+Sebelum langsung membuat sistem, diperlukan pengumpulan data dan pemeriksaan kondisi fasilitas air.
+
+Data yang sebaiknya dikumpulkan adalah:
+
+| Data | Tujuan |
+|---|---|
+| Kapasitas tangki | Mengetahui jumlah air maksimum yang dapat ditampung. |
+| Volume air | Mengetahui jumlah air yang tersedia. |
+| Debit air | Mengetahui jumlah air yang keluar. |
+| Tekanan air | Mengetahui kondisi distribusi. |
+| Kapasitas pompa | Mengetahui kemampuan pompa. |
+| Jumlah kantin | Mengetahui jumlah pengguna air. |
+| Waktu penggunaan | Mengetahui waktu penggunaan air tertinggi. |
+| Jumlah pengguna secara bersamaan | Mengetahui pengaruh penggunaan bersama terhadap debit. |
+| Jalur perpipaan | Mengetahui sistem distribusi air. |
+
+Setelah data tersebut diperoleh, dapat dilakukan analisis untuk mengetahui apakah masalah utama berasal dari:
+
+**Tangki → Pompa → Pipa/Distribusi → atau jumlah penggunaan air secara bersamaan.**
+
+Jika kapasitas penampungan memang tidak mencukupi, maka penambahan satu tangki air dapat dipertimbangkan.
+
+Jika masalah terdapat pada distribusi, maka sistem perpipaan dan tekanan air perlu diperiksa.
+
+Jika masalah terdapat pada pemantauan, maka sistem monitoring berbasis IoT dapat dikembangkan.
+
+---
+
+# 9. KESIMPULAN
+
+Berdasarkan hasil wawancara, kegiatan operasional sebagian besar usaha kantin dan usaha pendukung di lingkungan Fakultas Ekonomi dan Bisnis Universitas Pancasila dapat berjalan dengan baik. Namun, terdapat beberapa kendala seperti gangguan listrik, kenaikan harga bahan baku, harga plastik, serta permasalahan ketersediaan air.
+
+Permasalahan air menjadi salah satu permasalahan yang ditemukan pada beberapa kantin. Permasalahan tersebut meliputi **air keran yang kecil, air yang terkadang habis, serta air yang kurang mencukupi untuk mencuci piring dan peralatan kantin**.
+
+Berdasarkan keterangan pemilik usaha, terdapat kemungkinan bahwa permasalahan tersebut berkaitan dengan **kapasitas penampungan air, kemampuan pompa, atau sistem distribusi air yang belum memadai**. Penggunaan air secara bersamaan oleh beberapa kantin juga dilaporkan dapat menyebabkan debit air pada kantin lain menjadi lebih kecil atau bahkan tidak keluar. Kondisi tersebut masih perlu dibuktikan melalui pengukuran langsung terhadap sistem distribusi air.
+
+Salah satu solusi fasilitas yang dapat dipertimbangkan adalah **penambahan satu tangki air sebagai penampungan tambahan**. Namun, sebelum menentukan solusi akhir, diperlukan pemeriksaan dan pengukuran terhadap kapasitas tangki, pompa, debit air, tekanan, serta sistem perpipaan.
+
+Dari sudut pandang **Teknik Informatika**, permasalahan tersebut memiliki potensi untuk dikembangkan menjadi **Sistem Monitoring Ketersediaan dan Distribusi Air Berbasis IoT**. Sistem dapat menggunakan sensor dan mikrokontroler untuk memperoleh data mengenai volume air dan debit air. Data tersebut kemudian dapat ditampilkan melalui dashboard serta digunakan untuk memberikan notifikasi apabila terjadi kondisi tertentu.
+
+Dengan demikian, hasil wawancara dapat menjadi dasar untuk mengidentifikasi permasalahan nyata di lingkungan kampus dan merancang kemungkinan solusi berbasis Teknologi Informasi yang dapat membantu proses pemantauan kondisi air secara lebih terukur.
+
+---
+
+# 10. RANCANGAN INSTALASI SISTEM IoT
+
+Sistem monitoring air berbasis Internet of Things (IoT) dirancang untuk membantu memantau ketersediaan dan distribusi air di lingkungan kantin.
+
+Bagian ini menjelaskan gambaran komponen yang dibutuhkan dan tahapan pemasangan apabila sistem akan dikembangkan pada tahap berikutnya.
+
+## 10.1 Komponen yang Dibutuhkan
+
+| Komponen | Fungsi |
+|---|---|
+| ESP32 | Mengolah data sensor dan mengirimkannya melalui Wi-Fi. |
+| Sensor Ultrasonik | Mengukur jarak permukaan air untuk mengetahui ketinggian air di dalam tangki. |
+| Water Flow Sensor | Mengukur aliran atau debit air pada pipa. |
+| Kabel Jumper | Menghubungkan komponen elektronik. |
+| Power Supply | Menyediakan sumber daya listrik bagi perangkat. |
+| Wi-Fi | Mengirimkan data menuju sistem monitoring. |
+| Database | Menyimpan data hasil pembacaan sensor. |
+| Dashboard | Menampilkan informasi kondisi air. |
+
+Komponen tambahan dapat digunakan apabila sistem akan dikembangkan untuk memantau status pompa secara otomatis.
+
+## 10.2 Tahapan Instalasi
+
+Tahapan pemasangan sistem direncanakan sebagai berikut:
+
+1. **Pemeriksaan lokasi:** Memeriksa kondisi tangki, pompa, dan jalur perpipaan yang digunakan oleh kantin.
+2. **Pemasangan sensor ultrasonik:** Memasang sensor pada bagian atas tangki dengan posisi mengarah ke permukaan air.
+3. **Pemasangan sensor debit:** Memasang Water Flow Sensor pada jalur pipa yang akan dipantau sesuai petunjuk pemasangan perangkat.
+4. **Penghubungan komponen:** Menghubungkan sensor dengan mikrokontroler ESP32.
+5. **Penyediaan daya:** Menghubungkan perangkat dengan sumber listrik yang sesuai dan aman.
+6. **Pengaturan koneksi:** Menghubungkan ESP32 dengan jaringan Wi-Fi.
+7. **Pembuatan sistem monitoring:** Membuat sistem yang dapat menerima, menyimpan, dan menampilkan data sensor.
+8. **Pengujian:** Memastikan sensor dapat membaca kondisi air dan data dapat dikirim ke dashboard dengan benar.
+
+## 10.3 Cara Kerja Sistem
+
+Sistem bekerja dengan cara membaca kondisi air menggunakan sensor.
+
+1. Sensor ultrasonik membaca jarak antara sensor dengan permukaan air di dalam tangki.
+2. Data jarak digunakan untuk memperkirakan ketinggian atau volume air berdasarkan ukuran tangki.
+3. Water Flow Sensor membaca aliran air yang melewati pipa.
+4. ESP32 menerima dan memproses data dari sensor.
+5. ESP32 mengirimkan data melalui jaringan Wi-Fi.
+6. Sistem monitoring menerima data dan menyimpannya ke database.
+7. Dashboard menampilkan informasi kondisi air kepada pengelola.
+
+Dengan sistem tersebut, pengelola dapat mengetahui kondisi air tanpa harus selalu memeriksa tangki secara langsung.
+
+## 10.4 Gambaran Alur Instalasi dan Pengiriman Data
+
+```mermaid
+flowchart TD
+    A[Persiapan Tangki dan Pipa] --> B[Pemasangan Sensor]
+    B --> C[Hubungkan Sensor ke ESP32]
+    C --> D[Hubungkan ESP32 ke Wi-Fi]
+    D --> E[Pengiriman Data]
+    E --> F[Database]
+    F --> G[Dashboard Monitoring]
+    G --> H[Pengelola Memeriksa Kondisi Air]
+```
+
+## 10.5 Catatan Instalasi
+
+Pemasangan sensor debit perlu disesuaikan dengan jalur pipa yang ingin dipantau.
+
+Apabila ingin mengetahui distribusi air pada setiap kantin secara terpisah, sensor debit perlu dipasang pada masing-masing jalur pipa kantin.
+
+Jika hanya menggunakan satu sensor pada pipa utama, sistem hanya dapat memantau aliran air secara keseluruhan dan belum dapat menunjukkan jumlah air yang diterima setiap kantin.
+
+Pemasangan perangkat juga perlu memperhatikan keamanan listrik, kondisi lingkungan yang basah, serta petunjuk teknis dari masing-masing komponen.
+
+**Catatan:** Tahapan instalasi tersebut merupakan rencana pengembangan sistem. Pemasangan perangkat secara langsung belum dilakukan.
+
+---
+
+# 11. MAINTENANCE DAN PEMELIHARAAN SISTEM
+
+Maintenance merupakan kegiatan pemeliharaan yang dilakukan untuk memastikan sistem monitoring air berbasis IoT dapat berfungsi dengan baik dalam jangka panjang.
+
+Pemeliharaan diperlukan karena sensor, mikrokontroler, kabel, dan perangkat pendukung dapat mengalami gangguan apabila tidak diperiksa secara berkala.
+
+## 11.1 Komponen yang Perlu Di-maintenance
+
+| Komponen | Kegiatan Maintenance |
+|---|---|
+| Sensor Ultrasonik | Membersihkan permukaan sensor dan memeriksa ketepatan pembacaan ketinggian air. |
+| Water Flow Sensor | Memeriksa aliran air dan membersihkan bagian sensor apabila terdapat kotoran atau penyumbatan. |
+| ESP32 | Memeriksa kondisi mikrokontroler dan memastikan sistem dapat mengirimkan data. |
+| Kabel dan Konektor | Memeriksa sambungan kabel agar tidak longgar atau rusak. |
+| Power Supply | Memastikan sumber listrik tetap stabil dan aman. |
+| Wi-Fi | Memastikan koneksi jaringan berjalan dengan baik. |
+| Dashboard dan Database | Memeriksa apakah data sensor berhasil diterima, disimpan, dan ditampilkan. |
+| Tangki, Pompa, dan Pipa | Memeriksa kondisi tangki, kebocoran, pompa, dan kelancaran aliran air. |
+
+## 11.2 Jadwal Maintenance
+
+| Waktu | Kegiatan |
+|---|---|
+| Setiap hari | Memeriksa dashboard dan memastikan data sensor terbaca. |
+| Setiap minggu | Memeriksa kabel, konektor, sensor, dan koneksi Wi-Fi. |
+| Setiap bulan | Membersihkan sensor dan memeriksa ketepatan pembacaan data. |
+| Secara berkala | Memeriksa kondisi tangki, pompa, dan jalur perpipaan. |
+
+Jadwal tersebut merupakan rekomendasi awal dan dapat disesuaikan dengan kondisi penggunaan sistem.
+
+## 11.3 Penanganan Gangguan
+
+Apabila sistem mengalami gangguan, beberapa langkah yang dapat dilakukan adalah:
+
+1. Jika data ketinggian air tidak terbaca, periksa sensor ultrasonik dan sambungan kabelnya.
+2. Jika data debit air tidak muncul, periksa Water Flow Sensor dan jalur pemasangannya.
+3. Jika data tidak terkirim, periksa koneksi Wi-Fi dan ESP32.
+4. Jika dashboard tidak menampilkan informasi terbaru, periksa koneksi sistem dan database.
+5. Jika aliran air tetap kecil meskipun sistem monitoring berjalan normal, lakukan pemeriksaan terhadap pompa, tangki, dan perpipaan.
+
+## 11.4 Tujuan Maintenance
+
+Maintenance dilakukan untuk:
+
+- Menjaga sensor agar tetap dapat membaca kondisi air dengan baik.
+- Mengurangi risiko kerusakan perangkat.
+- Memastikan data dapat dikirim dan ditampilkan secara normal.
+- Mendeteksi gangguan lebih awal.
+- Membantu menjaga sistem agar dapat digunakan dalam jangka panjang.
+
+Dengan pemeliharaan secara berkala, sistem diharapkan dapat membantu pengelola memantau kondisi air secara lebih konsisten.
+
+---
+
+# 12. BATASAN DAN PENGEMBANGAN SISTEM
+
+Sistem monitoring air berbasis IoT merupakan rancangan awal yang berfokus pada pemantauan ketersediaan dan distribusi air.
+
+Sistem ini memiliki beberapa batasan, yaitu:
+
+1. Sistem hanya membantu memantau kondisi air melalui sensor.
+2. Sistem tidak secara langsung meningkatkan tekanan atau debit air.
+3. Sistem tidak dapat memperbaiki kerusakan pompa maupun kebocoran pipa secara otomatis.
+4. Akurasi informasi bergantung pada kondisi sensor, pemasangan, dan koneksi jaringan.
+5. Penyebab utama permasalahan air tetap perlu diperiksa secara langsung.
+6. Pemantauan distribusi setiap kantin memerlukan pemasangan sensor pada jalur pipa masing-masing.
+
+Untuk pengembangan selanjutnya, sistem dapat dilengkapi dengan:
+
+- Sensor tambahan pada setiap jalur distribusi kantin.
+- Fitur riwayat penggunaan air.
+- Notifikasi otomatis apabila volume air rendah.
+- Notifikasi apabila debit air mengalami penurunan.
+- Pemantauan status pompa dengan perangkat tambahan.
+- Dashboard yang dapat diakses oleh pengelola melalui komputer atau smartphone.
+
+Dengan pengembangan tersebut, sistem diharapkan dapat membantu pengelola dalam mengambil keputusan terkait penggunaan dan pemeliharaan fasilitas air.
+
+---
+
+# DOKUMENTASI KUESIONER
+
+## Kantin/Usaha yang Menjadi Sumber Informasi
+
+Dokumentasi ini berisi lima pertanyaan beserta jawaban dari pemilik usaha di lingkungan Fakultas Ekonomi dan Bisnis Universitas Pancasila. Data dikumpulkan melalui wawancara tatap muka menggunakan pertanyaan yang telah disiapkan oleh kelompok.
+
+Lima usaha yang menjadi sumber informasi adalah:
+
+1. Kantin Risol Sovina
+2. Warung Makan Berkah
+3. Fotocopy Mitra Buana
+4. Mie RR
+5. Dapur Selera Mamah Ria
+
+---
+
+## 1. Kantin Risol Sovina
+
+### Pertanyaan 1
+
+**Bisa diceritakan sedikit tentang usaha kantin yang Bapak/Ibu jalankan? Produk apa yang dijual, sudah berapa lama usaha berjalan, dan siapa pelanggan utamanya?**
+
+**Jawaban:**
+- **Lama usaha:** Sekitar 2 tahun.
+- **Pelanggan:** Anak-anak mahasiswa.
+
+### Pertanyaan 2
+
+**Selama menjalankan usaha kantin ini, kendala apa yang paling sering Bapak/Ibu alami?**
+
+**Jawaban:** Kekurangan air keran untuk mencuci piring dan keperluan lainnya.
+
+### Pertanyaan 3
+
+**Bagaimana proses penjualan biasanya dilakukan, dari pelanggan memesan sampai produk diterima? Apakah pernah mengalami kendala dalam proses tersebut?**
+
+**Jawaban:** Proses penjualan berjalan lancar dan tidak ada kendala.
+
+### Pertanyaan 4
+
+**Bagaimana Bapak/Ibu mencatat dan memantau stok bahan baku atau produk? Apakah pernah mengalami stok habis, terlalu banyak, rusak, atau kedaluwarsa?**
+
+**Jawaban:** Stok tidak pernah habis dan produk tidak pernah kedaluwarsa karena semuanya masih baru.
+
+### Pertanyaan 5
+
+**Bagaimana dengan kemasan produk? Apakah pernah ada kendala terkait desain, biaya, keamanan, penyimpanan, atau pengiriman?**
+
+**Jawaban:** Tidak ada kendala terkait kemasan produk.
+
+---
+
+## 2. Warung Makan Berkah
+
+### Pertanyaan 1
+
+**Bisa diceritakan sedikit tentang usaha yang Bapak/Ibu jalankan? Produk apa yang dijual, sudah berapa lama usaha berjalan, dan siapa pelanggan utamanya?**
+
+**Jawaban:**
+- **Produk:** Minuman botol, minuman saset, tisu, Pop Mie, makanan ringan, rokok, Teh Jumbo, berbagai jenis jus, es krim, soto Betawi, ayam goreng, ayam bakar, dan soto ayam.
+- **Lama usaha:** Sekitar 5 tahun.
+- **Pelanggan:** Mahasiswa Fakultas Ekonomi, Hukum, Teknik, Farmasi, Pariwisata, dan Perkeretaapian, serta dosen dan karyawan.
+
+### Pertanyaan 2
+
+**Selama menjalankan usaha ini, kendala apa yang paling sering Bapak/Ibu alami?**
+
+**Jawaban:** Kekurangan air keran atau debit air yang kecil. Tidak ada kendala terkait pencurian barang karena pelanggan yang mengambil barang tetapi belum membayar biasanya kembali untuk melakukan pembayaran.
+
+### Pertanyaan 3
+
+**Bagaimana proses penjualan biasanya dilakukan, dari pelanggan memesan sampai produk diterima? Apakah pernah mengalami kendala dalam proses tersebut?**
+
+**Jawaban:** Penjualan dilakukan melalui pemesanan online, pembelian langsung, makan di tempat, dibungkus, dan pengantaran ke lokasi.
+
+### Pertanyaan 4
+
+**Bagaimana pengelolaan stok bahan baku atau produk? Apakah pernah mengalami stok habis, terlalu banyak, rusak, atau kedaluwarsa?**
+
+**Jawaban:** Barang yang rusak diganti oleh pemasok. Tidak ada kendala berarti dalam pengelolaan stok karena usaha dijalankan sendiri tanpa karyawan.
+
+### Pertanyaan 5
+
+**Bagaimana dengan kemasan produk? Apakah pernah ada kendala terkait desain, biaya, keamanan, penyimpanan, atau pengiriman?**
+
+**Jawaban:** Tidak ada pengiriman barang. Kendala yang pernah dirasakan berkaitan dengan harga plastik, tetapi harga plastik mulai turun. Jika plastik rusak, plastik tersebut dapat ditukar.
+
+---
+
+## 3. Fotocopy Mitra Buana
+
+### Pertanyaan 1
+
+**Bisa diceritakan sedikit tentang usaha yang dijalankan, produk atau jasa yang ditawarkan, lama usaha, dan pelanggan utamanya?**
+
+**Jawaban:**
+- **Usaha:** Jasa fotokopi dan alat tulis kantor, termasuk penjilidan dokumen hingga skripsi.
+- **Lama usaha:** Sejak tahun 2009.
+- **Pelanggan:** Dosen serta mahasiswa Fakultas Ekonomi dan Bisnis dan jurusan lainnya.
+
+### Pertanyaan 2
+
+**Selama menjalankan usaha ini, kendala apa yang paling sering dialami?**
+
+**Jawaban:** Listrik sering mati dan dapat berlangsung hingga 4 jam dalam satu hari kerja. Selain itu, kegiatan perkuliahan secara daring atau WFH dapat mengurangi aktivitas usaha, sedangkan biaya sewa tempat tetap dibayar penuh tanpa diskon atau kompensasi.
+
+### Pertanyaan 3
+
+**Bagaimana proses pelayanan dilakukan? Apakah pernah mengalami kendala?**
+
+**Jawaban:** Tidak ada kendala besar. Jika terdapat kesalahan pada file, pemilik usaha memeriksa dan mendiskusikannya dengan pelanggan. Pemilik juga membantu memperbaiki isi dan format dokumen. Kendala keamanan yang pernah terjadi adalah kehilangan alat tulis atau minuman.
+
+### Pertanyaan 4
+
+**Bagaimana pengelolaan stok bahan baku atau produk?**
+
+**Jawaban:** Jika stok habis, barang dapat diisi kembali dalam waktu sekitar setengah jam hingga satu jam. Jumlah pembelian disesuaikan dengan kebutuhan usaha.
+
+### Pertanyaan 5
+
+**Apakah pernah ada kendala terkait kemasan, keamanan, penyimpanan, atau pengiriman?**
+
+**Jawaban:** Tidak ada masalah besar terkait keamanan.
+
+---
+
+## 4. Mie RR
+
+### Pertanyaan 1
+
+**Bisa diceritakan tentang usaha kantin, produk yang dijual, lama usaha, dan pelanggan utamanya?**
+
+**Jawaban:**
+- **Produk:** Mi seperti mi Gacoan, ayam crispy, bakso, dan minuman teh.
+- **Lama usaha:** Sekitar 2 tahun.
+- **Pelanggan utama:** Mahasiswa.
+
+### Pertanyaan 2
+
+**Selama menjalankan usaha, kendala apa yang paling sering dialami?**
+
+**Jawaban:** Air keran sering habis dan debit air tidak merata dengan kantin lain di area yang sama. Pompa air dinilai belum cukup kuat untuk menyediakan air bagi seluruh kantin secara bersamaan. Akibatnya, sebagian kantin hanya memperoleh sedikit air atau bahkan tidak mendapatkan air.
+
+### Pertanyaan 3
+
+**Bagaimana proses penjualan dilakukan? Apakah pernah mengalami kendala?**
+
+**Jawaban:** Terdapat keluhan dari pelanggan agar makanan dibuat lebih cepat.
+
+### Pertanyaan 4
+
+**Bagaimana pengelolaan stok bahan baku atau produk?**
+
+**Jawaban:** Stok yang habis dicatat setelah kegiatan penjualan selesai.
+
+### Pertanyaan 5
+
+**Apakah pernah ada kendala terkait kemasan produk?**
+
+**Jawaban:** Tidak ada kendala terkait kemasan produk.
+
+---
+
+## 5. Dapur Selera Mamah Ria
+
+### Pertanyaan 1
+
+**Bisa diceritakan tentang usaha kantin, produk yang dijual, lama usaha, dan pelanggan utamanya?**
+
+**Jawaban:**
+- **Produk:** Nasi rames, lauk-pauk, makanan ringan, Indomie, minuman instan, kue, gorengan, dan roti.
+- **Lama usaha:** Sekitar 6 bulan.
+- **Pelanggan utama:** Mahasiswa, dosen, dan karyawan.
+
+### Pertanyaan 2
+
+**Selama menjalankan usaha, kendala apa yang paling sering dialami?**
+
+**Jawaban:** Debit air keran kecil dan terdapat kenaikan harga bahan baku. Harga beras, cabai, plastik, serta bahan bakar juga memengaruhi biaya operasional usaha.
+
+### Pertanyaan 3
+
+**Bagaimana proses penjualan dilakukan? Apakah pernah mengalami kendala?**
+
+**Jawaban:** Tidak terdapat masalah besar dalam proses penjualan. Namun, pemilik usaha terkadang lupa siapa yang memesan atau lupa pesanan nasi yang diminta pelanggan.
+
+### Pertanyaan 4
+
+**Bagaimana pengelolaan stok bahan baku atau produk?**
+
+**Jawaban:** Produk jarang kedaluwarsa. Jika stok habis, barang dapat dibeli kembali langsung dari agen. Makanan ringan juga berisiko menjadi rapuh atau hancur apabila dipegang terlalu keras oleh pelanggan.
+
+### Pertanyaan 5
+
+**Apakah pernah ada kendala terkait kemasan, biaya, keamanan, penyimpanan, atau pengiriman?**
+
+**Jawaban:** Tidak ada kendala besar terkait kemasan, penyimpanan, maupun pengiriman. Namun, kenaikan harga kertas nasi dan bahan bakar dapat memengaruhi biaya usaha.
+
+---
+
+## Kesimpulan Dokumentasi
+
+Berdasarkan hasil wawancara dari lima usaha, ditemukan beberapa permasalahan operasional, seperti kekurangan air keran, debit air yang kecil, gangguan listrik, kenaikan harga bahan baku, dan kendala pencatatan pesanan.
+
+Permasalahan ketersediaan dan distribusi air ditemukan pada beberapa kantin dan dapat menjadi dasar untuk menganalisis kemungkinan pengembangan sistem monitoring air berbasis Teknologi Informasi.
+
+Dokumentasi ini disusun berdasarkan hasil wawancara tatap muka dengan pemilik usaha menggunakan panduan pertanyaan yang telah disiapkan oleh kelompok. Jawaban dari setiap responden kemudian dicatat dan digunakan sebagai dasar untuk mengidentifikasi permasalahan operasional serta merancang kemungkinan solusi berbasis Teknologi Informasi.
+
+---
+
+## Catatan
+
+1. Laporan ini disusun berdasarkan informasi yang diberikan oleh pemilik usaha melalui wawancara tatap muka menggunakan pertanyaan yang telah disiapkan oleh kelompok.
+2. Analisis mengenai kemungkinan keterbatasan kapasitas tangki, kapasitas pompa, dan distribusi air merupakan analisis awal berdasarkan keluhan yang disampaikan oleh pemilik usaha. Penyebab teknis sebenarnya masih memerlukan pemeriksaan dan pengukuran secara langsung.
+3. Rancangan sistem monitoring berbasis IoT yang ditampilkan dalam laporan merupakan konsep atau rekomendasi awal, bukan sistem yang telah diimplementasikan.
+4. Rancangan instalasi dan maintenance merupakan rencana pengembangan apabila sistem akan direalisasikan pada tahap selanjutnya.
