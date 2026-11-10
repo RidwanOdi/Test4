@@ -21,7 +21,7 @@ Dokumen ini disusun untuk memenuhi **Laporan Tugas Mata Kuliah Kewirausahaan (B)
 | Anggun Setiawati Dewi | 4523210019 | Membuat presentasi PowerPoint dan membantu memberikan semangat kepada anggota kelompok. |
 | Ridwan Odi Nugroho | 4524210089 | Melakukan wawancara tatap muka dengan pemilik usaha menggunakan kuesioner yang telah disiapkan, menyusun pertanyaan kuesioner, mengatur kebutuhan dan struktur repository GitHub, serta menginisiasi dan mengarahkan proses awal kegiatan. |
 | Zaidan Dziaulfawwaz | 4524210105 | Membuat presentasi PowerPoint dan membantu memberikan semangat kepada anggota kelompok. |
-| Adystya Anandita | 4525210003 | Membuat presentasi PowerPoint untuk tugas presentasi pertama. [Lihat Presentasi](https://docs.google.com/presentation/d/1VXO7XrQDsNq_OlvRNojLwIm9PXsBsyjqqiIOMSqK-w0/edit?usp=sharing) |
+| Adystya Anandita | 4525210003 | Membuat presentasi PowerPoint untuk tugas presentasi pertama. [Lihat Presentasi](https://www.canva.com/design/DAHWIjX0MNM/3f4WePO9xDORP68SroDPww/edit) |
 | Alwan Fawwaz Ibrahim | 4525210010 | Membuat Google Form kuesioner dan memilih pertanyaan yang akan dimasukkan ke dalam Google Form. |
 
 ---
